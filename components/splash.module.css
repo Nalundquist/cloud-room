@@ -1,0 +1,17 @@
+.container{
+	padding: 30px;
+	justify-content: center;
+	top: 50vh;
+}
+
+.splashBox{
+	color: white;
+	font-family: Arastin;
+	font-size: 2vh;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.45ch;
+} 
+
+
+
