@@ -1,18 +1,35 @@
 import { Splash } from "./Splash";
-import { useState } from "react";
-import { Artists } from "@/Artists";
-
+import { useEffect, useState } from "react";
+import { Artists } from "./Artists";
+import * as classes from "./Container.module.css"
 export const Container = () => {
 	
-	const [ visibleDisplay, setVisibleDisplay ] = useState(<Splash />);
+	const [ visibleDisplay, setVisibleDisplay ] = useState(null);
+	const [ mobileVersion, setMobileVersion ] = useState(false);
+
+	useEffect(() => {
+		const mobileDisplay = window.matchMedia("(max-width: 724px)");
+
+		if (mobileDisplay) {
+			setMobileVersion(true);
+		}
+
+		if (visibleDisplay == null){
+			setVisibleDisplay(<Splash handleSplashClick={handleSplashClick} />)
+			console.log(visibleDisplay);
+		}
+	}, [mobileVersion, visibleDisplay])
+
 
 	const handleSplashClick = () => {
-		setVisibleDisplay(<Artists />);
+		setVisibleDisplay(<Artists mobileVersion={mobileVersion} />);
 	}
-	
+
 	return(
-		<>
+		<div className={classes.container}>
 			{visibleDisplay}
-		</>
+			{/* <Splash />
+			<Artists /> */}
+		</div>
 	)
 }
