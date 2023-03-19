@@ -1,9 +1,13 @@
-import classes from './splash.module.css';
+import * as classes from './Splash.module.css';
 
 export const Splash = () => {
-	<div className="container">
-		<div className="textBox">
-			
+	return(
+	<div className={classes.container}>
+		<div className={classes.splashBox}>
+			<p>Cloud</p>
+			<p>Room</p>
+			<p>Tattoo</p>
 		</div>
 	</div>
+	)
 }
