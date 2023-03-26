@@ -12,6 +12,7 @@ export const Container = () => {
 
 		if (mobileDisplay) {
 			setMobileVersion(true);
+			console.log(mobileVersion)
 		}
 
 		if (visibleDisplay == null){

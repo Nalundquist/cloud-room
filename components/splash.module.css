@@ -6,15 +6,14 @@
 .splashBox{
 	color: white;
 	font-family: Arastin;
-	font-size: 10vh;
+	font-size: 10vw;
 	display: flex;
 	flex-direction: column;
 	line-height: 1ch;
 	position: relative;
 	align-items: center;
-	top: 10vh;
+	top: 5vh;
 	left: -10vw;
-	/* left: vw; */
 	cursor: pointer;
 } 
 

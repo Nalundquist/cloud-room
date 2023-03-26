@@ -32,7 +32,7 @@ export const Artists = (props) => {
 	return(
 		<div>
 			<div className={classes.artistColumn}>
-				<div className={mobileVersion ? null : classes.artistRow}>
+				<div className={classes.artistRow}>
 					<div className={classes.artistCard}>
 						<p className={classes.artistFont}>Freak Body</p>
 					</div>
