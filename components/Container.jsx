@@ -23,7 +23,7 @@ export const Container = () => {
 
 
 	const handleSplashClick = () => {
-		setVisibleDisplay(<Artists mobileVersion={mobileVersion} />);
+		setVisibleDisplay(<Artists />);
 	}
 
 	return(
