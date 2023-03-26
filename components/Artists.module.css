@@ -23,6 +23,7 @@
 .artistCard{
 	background-color: #fc7f7b;
 	z-index: 5;
+	line-height: .8;
 	height: 200px;
 	width: 300px;
 	text-align: center;
@@ -40,6 +41,5 @@
 	color: black;
 	font-family: Arastin;
 	font-size: 3.5vh;
-	top: 20%;
 	position: relative;
 }
