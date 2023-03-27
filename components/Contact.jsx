@@ -1,5 +1,10 @@
+import * as classes from './Contact.module.css'
+
 export const Contact = () => {
 	return(
-		<p>Faffy</p>
+		<div className={classes.contactForm}>
+			<p>Faffy</p>
+
+		</div>
 	)
 }

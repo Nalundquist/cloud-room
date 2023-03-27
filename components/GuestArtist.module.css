@@ -1,0 +1,21 @@
+.guestArtist{
+	background-color: pink;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	animation-duration: 1s;
+	animation-name: fadeIn;
+	z-index: 10;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

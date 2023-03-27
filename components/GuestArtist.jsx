@@ -1,5 +1,10 @@
+import * as classes from './GuestArtist.module.css'
+
 export const GuestArtist = () => {
 	return(
-		<p>Faffy</p>
+		<div className={classes.guestArtist}>
+			<p>Faffy</p>
+
+		</div>
 	)
 }
