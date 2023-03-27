@@ -1,0 +1,11 @@
+.contactBar{
+	background-color: #fc7f7b;
+	position: fixed;
+	align-self: baseline;
+	left: 20%;
+	bottom: 0;
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

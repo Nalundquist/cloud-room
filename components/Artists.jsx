@@ -1,6 +1,7 @@
 import * as classes from "./Artists.module.css";
-import webLogo from "../public/img/www-logo-img.png"
+import webLogo from "../public/img/www-logo-img-2.png"
 import instaLogo from "../public/img/insta-logo-img.png"
+import Link from 'next/link'
 import Image from 'next/image';
 import { Footer } from "./Footer";
 import { Contact } from "./Contact";
@@ -35,46 +36,75 @@ export const Artists = () => {
 	return(
 		<div>
 			<div className={classes.artistColumn}>
-				<div className={classes.artistRow}>
-					<div className={classes.artistCard}>
-						<p className={classes.artistFont}>Freak Body</p>
-						<Image 
-							src={webLogo} 
-							alt="Website Logo and Link for Freak Body Tattoo"
-							width={75}
-							height={75}/>
-						<Image 
-							src={instaLogo} 
-							alt="Instagram Logo and Link for Freak Body Tattoo" 
-							width={75}
-							height={75}/>
-					</div>
-					<div className={classes.artistCard}>
-						<p className={classes.artistFont}>Ibuprofane</p>
+				<div className={classes.artistCard} id={classes.card1}>
+					<p className={classes.artistFont}>Cloud Room</p>
+					{/* <Link href="https://www.instagram.com/shell_station_tattoo/?hl=en">
 						<Image 
 							src={webLogo} 
 							alt="Website Logo and Link for Ibuprofane Tattoo" 
-							width={75}
-							height={75}/>
+							width={50}
+							height={50}/>
+					</Link> */}
+					<Link href='https://www.instagram.com/CloudRoomTattoo/?hl=en'>
 						<Image 
 							src={instaLogo} 
-							alt="Instagram Logo and Link for Ibuprofane Tattoo" 
-							width={75}
-							height={75}/>
+							alt="Instagram Logo and Link for Cloud Room Tattoo" 
+							width={50}
+							height={50}/>
+					</Link>
+				</div>
+				<div className={classes.artistRow}>
+					<div className={classes.artistCard} id={classes.card2}>
+						<p className={classes.artistFont}>Freak Body</p>
+						<Link href='https://freakbodytattoo.com'>
+							<Image 
+								src={webLogo} 
+								alt="Website Logo and Link for Freak Body Tattoo"
+								width={50}
+								height={50}/>
+						</Link>
+						<Link href='https://www.instagram.com/freak_body/?hl=en'>
+							<Image 
+								src={instaLogo} 
+								alt="Instagram Logo and Link for Freak Body Tattoo" 
+								width={50}
+								height={50}/>
+						</Link>
+					</div>
+					<div className={classes.artistCard} id={classes.card3}>
+						<p className={classes.artistFont}>Ibuprofane</p>
+						{/* <Link href="https://www.instagram.com/shell_station_tattoo/?hl=en">
+							<Image 
+								src={webLogo} 
+								alt="Website Logo and Link for Ibuprofane Tattoo" 
+								width={50}
+								height={50}/>
+						</Link> */}
+						<Link href='https://www.instagram.com/ibuprofane.tattoo/?hl=en'>
+							<Image 
+								src={instaLogo} 
+								alt="Instagram Logo and Link for Ibuprofane Tattoo" 
+								width={50}
+								height={50}/>
+						</Link>
 					</div>
 				</div>
-				<div className={classes.artistCard}>
+				<div className={classes.artistCard} id={classes.card4}>
 					<p className={classes.artistFont}>Shell Station</p>
-					<Image 
-						src={webLogo} 
-						alt="Website Logo and Link for Shell Station Tattoo" 
-						width={75}
-						height={75}/>
-					<Image 
-						src={instaLogo} 
-						alt="Instagram Logo and Link for Shell Station Tattoo" 
-						width={75}
-						height={75}/>
+					{/* <Link href='https://www.instagram.com/shell_station_tattoo/?hl=en'>
+						<Image 
+							src={webLogo} 
+							alt="Website Logo and Link for Shell Station Tattoo" 
+							width={50}
+							height={50}/>
+					</Link> */}
+					<Link href='https://www.instagram.com/shell_station_tattoo/?hl=en'>
+						<Image 
+							src={instaLogo} 
+							alt="Instagram Logo and Link for Shell Station Tattoo" 
+							width={50}
+							height={50}/>
+					</Link>
 				</div>
 			</div>
 			<Footer handleFormDisplay={handleFormDisplay}/>

@@ -9,7 +9,6 @@
 	align-items: center;
 	height: 80vh;
 	position: relative;
-	top: 20vh;
 	/* background-color: red ; */
 }
 
@@ -21,12 +20,13 @@
 }
 
 .artistCard{
-	background-color: #fc7f7b;
+	/* background-image: linear-gradient(#87525d, #f293b9); */
 	z-index: 5;
-	line-height: .8;
-	height: 200px;
-	width: 300px;
+	line-height: 1.5;
+	height: 20vh;
+	width: 40vw;
 	text-align: center;
+	padding-top: 10px;
 	margin: 30px;
 	clip-path: polygon(
 		50% 0,
@@ -37,9 +37,26 @@
 		0% 20%);
 }
 
+#card1{
+	background-image: linear-gradient(#bd3550, #f293b9);
+}
+
+#card2{
+	background-image: linear-gradient(#bf6073, #9c87d0);
+}
+
+#card3{
+	background-image: linear-gradient(#47a3bc, #c5819c);
+}
+
+#card4{
+	background-image: linear-gradient(#6882bc, #da5dce);
+}
+
 .artistFont{
 	color: black;
 	font-family: Arastin;
-	font-size: 3.5vh;
+	font-size: 3.5vmin;
 	position: relative;
+	top: 15%
 }
