@@ -17,11 +17,11 @@ export const Artists = () => {
 	const handleFormDisplay = (formName) => {
 		const generalContact = 
 			<div className={classes.formContainer}>
-				<Contact />
+				<Contact setOverlayVisible={setOverlayVisible}/>
 			</div>
 		const guestArtistContact = 
 			<div className={classes.formContainer}>
-				<GuestArtist />
+				<GuestArtist  setOverlayVisible={setOverlayVisible}/>
 			</div>
 		
 		if (formName == "generalContact"){
@@ -107,7 +107,7 @@ export const Artists = () => {
 					</Link>
 				</div>
 			</div>
-			<Footer handleFormDisplay={handleFormDisplay}/>
+			<Footer handleFormDisplay={handleFormDisplay} />
 			{overlayVisible}
 		</div>
 	)
