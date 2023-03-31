@@ -1,4 +1,4 @@
-.contactForm{
+.contactFormContainer{
 	background-color: pink;
 	position: absolute;
 	top: 0;
@@ -8,6 +8,10 @@
 	animation-duration: 1s;
 	animation-name: fadeIn;
 	z-index: 10;
+}
+
+.contactForm{
+	margin: 30px;
 }
 
 @keyframes fadeIn {
