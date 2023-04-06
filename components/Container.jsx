@@ -2,6 +2,7 @@ import { Splash } from "./Splash";
 import { useEffect, useState } from "react";
 import { Artists } from "./Artists";
 import * as classes from "./Container.module.css"
+
 export const Container = () => {
 	
 	const [ visibleDisplay, setVisibleDisplay ] = useState(null);
@@ -21,9 +22,8 @@ export const Container = () => {
 		}
 	}, [mobileVersion, visibleDisplay])
 
-
 	const handleSplashClick = () => {
-		setVisibleDisplay(<Artists />);
+		setVisibleDisplay(<Artists mobileVersion={mobileVersion}/>);
 	}
 
 	return(

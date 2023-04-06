@@ -11,9 +11,6 @@ import { useState } from "react"
 export const Artists = () => {
 	const [ overlayVisible, setOverlayVisible ] = useState(null); 
 
-	console.log(webLogo);
-	console.log(instaLogo);
-
 	const handleFormDisplay = (formName) => {
 		const generalContact = 
 			<div className={classes.formContainer}>

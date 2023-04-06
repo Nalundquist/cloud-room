@@ -25,6 +25,6 @@ contactEmail.verify((error) => {
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.lister(5000, () => {
+app.listen(5000, () => {
 
 })
