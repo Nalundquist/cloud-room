@@ -6,7 +6,7 @@
 .splashBox{
 	color: white;
 	font-family: Arastin;
-	font-size: 10vw;
+	font-size: max(10vw, 85px);
 	display: flex;
 	flex-direction: column;
 	line-height: 1ch;

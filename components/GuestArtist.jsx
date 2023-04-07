@@ -36,6 +36,7 @@ export const GuestArtist = (props) => {
 			accepted: "pending"
 		};
 		await addDoc(collection(db, "GuestArtists"), artistRequest)
+		console.log("handleAddArtist")
 		setSubmitStatus("Submit");
 	}
 
@@ -64,7 +65,7 @@ export const GuestArtist = (props) => {
 					<p>Message</p>
 					<input type="text" name="message" className={classes.messageField} />
 					<div className={classes.bottomButtons}>
-						<button className={classes.submitButton} type='submit'>
+						<button className={classes.submitButton} onClick={() => {handleAddArtist(event)}} type='submit'>
 							Send
 						</button>
 						<button className={classes.returnButton} onClick={() => {setOverlayVisible()}} >

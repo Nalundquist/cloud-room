@@ -83,6 +83,7 @@
 
 .submitButton:hover{
 	background-color: paleturquoise;
+	cursor: pointer;
 }
 
 .returnButton{
