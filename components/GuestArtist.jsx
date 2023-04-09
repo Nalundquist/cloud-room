@@ -59,9 +59,9 @@ export const GuestArtist = (props) => {
 					<p>Website/Instagram</p>
 					<input type="text" name="website" className={classes.subjectInput} />
 					<p>Requested Start Date</p>
-					<input type="date" name="startDate" />
+					<input type="date" name="startDate" className={classes.dateInput} />
 					<p>Requested End Date</p>
-					<input type="date" name="endDate"  />
+					<input type="date" name="endDate" className={classes.dateInput} />
 					<p>Message</p>
 					<input type="text" name="message" className={classes.messageField} />
 					<div className={classes.bottomButtons}>

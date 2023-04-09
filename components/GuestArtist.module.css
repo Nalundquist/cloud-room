@@ -46,6 +46,12 @@
 	margin-bottom: 20px;
 }
 
+.dateInput {
+	width: 300px;
+	height: 20px;
+
+}
+
 .messageField{
 	width: 50%;
 	height: 30%;
