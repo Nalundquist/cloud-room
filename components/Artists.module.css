@@ -15,6 +15,8 @@
 
 .artistCard{
 	/* background-image: linear-gradient(#87525d, #f293b9); */
+	/* opacity: 65%; */
+	background-color: rgb(228, 120, 144, .45);
 	z-index: 5;
 	line-height: 1.5;
 	height: 20vh;
@@ -31,7 +33,7 @@
 		0% 20%);
 	}
 	
-	#card1{
+	/* #card1{
 		background-image: linear-gradient(#bd3550, #f293b9);
 	}
 	
@@ -45,14 +47,15 @@
 	
 	#card4{
 		background-image: linear-gradient(#6882bc, #da5dce);
-	}
+	} */
 	
 	.artistFont{
 		color: black;
 		font-family: Arastin;
 		font-size: 3.5vmin;
 		position: relative;
-		top: 15%
+		top: 15%;
+		opacity: 100%;
 	}
 
 	@media screen and (min-width: 1024px){
