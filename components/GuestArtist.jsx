@@ -1,14 +1,25 @@
 import * as classes from './Contact.module.css'
 import React, { useState } from 'react';
+import { useRef } from 'react';
 import { db } from '../firebase'
 import 
 	{ addDoc,
 		collection} from 'firebase/firestore';
+import { CLIENT_STATIC_FILES_RUNTIME_WEBPACK } from 'next/dist/shared/lib/constants';
 
 export const GuestArtist = (props) => {
 
 	const [ submitStatus, setSubmitStatus ] = useState();
 	const [ error, setError ] = useState();
+
+	const nameInputRef = useRef();
+	const emailInputRef = useRef();
+	const phoneInputRef = useRef();
+	const websiteInputRef = useRef();
+	const subjectInputRef = useRef();
+	const startDateInputRef = useRef();
+	const endDateInputRef = useRef();
+	const messageInputRef = useRef();
 
 	const { setOverlayVisible } = props;
 
@@ -48,22 +59,62 @@ export const GuestArtist = (props) => {
 					<p>- Cloud Room</p>
 				</div>
 				<div className={classes.contactForm}>
-					<p>Name</p>
-					<input type="text" name="name" className={classes.smallInput} />
-					<p>Email</p>
-					<input type="text" name="email" className={classes.smallInput} />
-					<p>Phone Number</p>
-					<input type="text" name="phone" className={classes.smallInput} />
-					<p>Subject</p>
-					<input type="text" name="subject" className={classes.subjectInput} />
-					<p>Website/Instagram</p>
-					<input type="text" name="website" className={classes.subjectInput} />
-					<p>Requested Start Date</p>
-					<input type="date" name="startDate" className={classes.dateInput} />
-					<p>Requested End Date</p>
-					<input type="date" name="endDate" className={classes.dateInput} />
-					<p>Message</p>
-					<input type="text" name="message" className={classes.messageField} />
+					<label htmlFor='name'>Name</label>
+					<input 
+						type="text" 
+						id="name" 
+						name="name" 
+						className={classes.smallInput}
+						ref={nameInputRef} />
+					<label htmlFor='email'>Email</label>
+					<input 
+						type="text" 
+						id="email" 
+						name="email" 
+						className={classes.smallInput} 
+						ref={emailInputRef} />
+					<label htmlFor='phone'>Phone Number</label>
+					<input 
+						type="text" 
+						id="phone" 
+						name="phone" 
+						className={classes.smallInput} 
+						ref={phoneInputRef} />
+					<label htmlFor='subject'>Subject</label>
+					<input 
+						type="text" 
+						id="subject" 
+						name="subject" 
+						className={classes.subjectInput} 
+						ref={subjectInputRef} />
+					<label htmlFor='website'>Website/Instagram</label>
+					<input 
+						type="text" 
+						id="website" 
+						name="website" 
+						className={classes.subjectInput} 
+						ref={websiteInputRef} />
+					<label htmlFor='startDate'>Requested Start Date</label>
+					<input 
+						type="date" 
+						id="startDate" 
+						name="startDate" 
+						className={classes.dateInput} 
+						ref={startDateInputRef} />
+					<label htmlFor='endDate'>Requested End Date</label>
+					<input 
+						type="date" 
+						id="endDate" 
+						name="endDate" 
+						className={classes.dateInput} 
+						ref={endDateInputRef} />
+					<label htmlFor='message'>Message</label>
+					<input 
+						type="text" 
+						id="message" 
+						name="message" 
+						className={classes.messageField} 
+						ref={messageInputRef}/>
 					<div className={classes.bottomButtons}>
 						<button className={classes.submitButton} onClick={() => {handleAddArtist(event)}} type='submit'>
 							Send
