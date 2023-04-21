@@ -36,17 +36,17 @@ export const GuestArtist = (props) => {
 			endDate,
 			message} = e.target.elements;
 		let artistRequest = {
-			name: name.value,
-			email: email.value,
-			phone: phone.value,
-			website: website.value,
-			subject: subject.value,
-			startDate: startDate.value,
-			endDate: endDate.value,
-			message: message.value,
+			name: nameInputRef.current.value,
+			email: emailInputRef.current.value,
+			phone: phoneInputRef.current.value,
+			website: website.current.value,
+			subject: subject.current.value,
+			startDate: startDate.current.value,
+			endDate: endDate.current.value,
+			message: message.current.value,
 			accepted: "pending"
 		};
-		await addDoc(collection(db, "GuestArtists"), artistRequest)
+		// await addDoc(collection(db, "GuestArtists"), artistRequest)
 		console.log("handleAddArtist")
 		setSubmitStatus("Submit");
 	}
