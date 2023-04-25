@@ -1,13 +1,17 @@
 import fs from 'fs';
 import path from 'path';
 
-let path = require("path");
-let http = require("http");
-
+function buildPath() {
+	return path.join(process.cwd(), 'data', 'guestArtist.json');
+}
+function buildData(filePath) {
+	const fileData = fs.readFileSync(filePath);
+	return JSON.parse(fileData);
+}
 function handler(req, res) {
 	if (req.method == "POST") {
 
-		const artistRequest = req.body.artistRequest;
+		const artistRequest = req.body;
 		const newArtistRequest = {
 			id: new Date().toISOString(),
 		  name: artistRequest.nameInputRef,
@@ -20,15 +24,16 @@ function handler(req, res) {
 			message: artistRequest.message,
 			accepted: artistRequest.accepted
 		}
-		const filePath = path.join(process.cwd(), 'data', 'guestArtist.json');
-		const fileData = fs.readFileSync(filePath);
-		const data = JSON.parse(fileData);
+		const filePath = buildPath();
+		const data = buildData(filePath);
 		data.push(newArtistRequest);
 		fs.writeFileSync(filePath, JSON.stringify(data));
 		res.status(201).json({message: "successful upload", artistRequest: newArtistRequest});
 
 	} else {
-		res.status(200).json({message: "functioning"}); 
+		const filePath = buildPath();
+		const data = buildData(filePath);
+		res.status(200).json({message: "functioning", artistRequests: data}); 
 	}
 }
 

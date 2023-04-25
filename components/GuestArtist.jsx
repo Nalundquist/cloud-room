@@ -26,26 +26,36 @@ export const GuestArtist = (props) => {
 	const handleAddArtist = async (e) => {
 		e.preventDefault();
 		setSubmitStatus("Sending")
-		const 
-			{name,
-			email, 
-			phone, 
-			website,
-			subject, 
-			startDate,
-			endDate,
-			message} = e.target.elements;
+		// const 
+		// 	{name,
+		// 	email, 
+		// 	phone, 
+		// 	website,
+		// 	subject, 
+		// 	startDate,
+		// 	endDate,
+		// 	message} = e.target.elements;
 		let artistRequest = {
 			name: nameInputRef.current.value,
 			email: emailInputRef.current.value,
 			phone: phoneInputRef.current.value,
-			website: website.current.value,
-			subject: subject.current.value,
-			startDate: startDate.current.value,
-			endDate: endDate.current.value,
-			message: message.current.value,
+			website: websiteInputRef.current.value,
+			subject: subjectInputRef.current.value,
+			startDate: startDateInputRef.current.value,
+			endDate: endDateInputRef.current.value,
+			message: messageInputRef.current.value,
 			accepted: "pending"
 		};
+		console.log(artistRequest)
+		fetch('/api/guest-artist', {
+			method: 'POST',
+			body: JSON.stringify(artistRequest),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		})
+			.then((response) => response.json())
+			.then((data) => console.log(data));
 		// await addDoc(collection(db, "GuestArtists"), artistRequest)
 		console.log("handleAddArtist")
 		setSubmitStatus("Submit");
